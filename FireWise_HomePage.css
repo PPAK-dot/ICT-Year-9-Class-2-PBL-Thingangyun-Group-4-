@@ -1,0 +1,1159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --dark-red: #650b10;
+    --fire-red: #e52b2b;
+    --accent-red: #ff3838;
+    --black: #111111;
+    --dark-grey: #252525;
+    --light-grey: #f3f3f3;
+    --text: #351719;
+    --muted: #655153;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* NAVBAR */
+ 
+.fire-navbar {
+    background: var(--black);
+    border-top: 5px solid var(--fire-red);
+    border-bottom: 1px solid #333;
+    min-height: 90px;
+    padding: 12px 0;
+}
+ 
+.navbar-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+ 
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+ 
+.brand-text span {
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+}
+ 
+.brand-text small {
+    color: #ddd;
+    font-size: 10px;
+}
+ 
+.fire-navbar .nav-link {
+    color: white !important;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 9px !important;
+    transition: 0.3s;
+}
+ 
+.fire-navbar .nav-link:hover {
+    color: var(--accent-red) !important;
+}
+
+.fire-navbar .navbar-nav .nav-link.active {
+    background-color: #e52b2b;
+    color: #ffffff !important;
+}
+ 
+.nav-login-btn {
+    display: inline-block;
+    background: #650b10;
+    color: white !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 15px;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-login-btn:hover {
+    background: #e52b2b;
+    color: white !important;
+}
+ 
+.search-btn {
+    background: #252525;
+    color: white;
+    border: 1px solid #650b10;
+    border-radius: 5px;
+    padding: 9px 13px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+ 
+.search-btn:hover {
+    background: #650b10;
+    color: white;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 390px;
+    height: 38vw;
+    max-height: 510px;
+    overflow: hidden;
+    background-color: #171717;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Replace these with your own image filenames */
+
+.hero-one {
+    background-image: url("jhsfhsdakjfsakf.jpg");
+}
+
+.hero-two {
+    background-image: url("Fire Safety Equipment.jpg");
+}
+
+.hero-three {
+    background-image: url("members-myanmar-fire-services-department-participate-earthquake-440nw-11701749l.jpg");
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.76) 48%,
+        rgba(0,0,0,0.35) 100%
+    );
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 760px;
+    padding: 15px 0 15px 25px;
+    border-left: 5px solid var(--fire-red);
+    color: #ffffff;
+}
+
+.hero-label {
+    display: block;
+    margin-bottom: 13px;
+    color: #ff5555;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 720px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: clamp(34px, 4.5vw, 57px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.3px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--fire-red);
+}
+
+.hero p {
+    max-width: 590px;
+    margin-bottom: 23px;
+    color: #eeeeee;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 21px;
+    border: none;
+    border-radius: 3px;
+    background: var(--fire-red);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+}
+
+.hero-btn:hover {
+    background: #ffffff;
+    color: var(--dark-red);
+    transform: translateY(-2px);
+}
+
+.carousel-indicators {
+    z-index: 3;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 23px;
+    height: 4px;
+    margin: 0 4px;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+}
+
+.carousel-indicators .active {
+    background: var(--fire-red);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 3;
+    width: 5%;
+    opacity: 0.65;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+
+/* HERO TEXT ANIMATION */
+
+@keyframes heroTextRise {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text-animate {
+    animation: heroTextRise 0.85s ease-out both;
+}
+
+
+/* =========================================
+   HOMEPAGE FEATURE CARDS
+========================================= */
+
+.home-features {
+    padding: 24px 0 30px;
+    background: var(--light-grey);
+}
+
+.feature-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 185px;
+    padding: 23px 19px;
+    overflow: hidden;
+    background: var(--black);
+    border-top: 4px solid var(--fire-red);
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: var(--dark-grey);
+    color: #ffffff;
+    box-shadow: 0 9px 22px rgba(0,0,0,0.18);
+}
+
+.feature-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    margin-bottom: 14px;
+    background: var(--fire-red);
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 21px;
+}
+
+.feature-card h3 {
+    margin-bottom: 9px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.feature-card p {
+    margin-bottom: 17px;
+    color: #d0d0d0;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.feature-card > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #ff5555;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   SECTION LABELS AND BUTTONS
+========================================= */
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--fire-red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.section-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding: 12px 18px;
+    background: var(--fire-red);
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.section-button:hover {
+    background: var(--dark-red);
+    color: #ffffff;
+}
+
+
+/* =========================================
+   BACKGROUND OF THE ISSUE
+========================================= */
+
+.background-issue {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    padding: 65px 7%;
+    background: #ffffff;
+}
+
+.issue-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.issue-text h2 {
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: clamp(28px, 3.5vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.issue-text h2 span {
+    color: var(--fire-red);
+}
+
+.issue-text p {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.issue-text mark {
+    padding: 2px 4px;
+    background: var(--fire-red);
+    color: #ffffff;
+}
+
+.issue-image {
+    flex: 0 0 42%;
+}
+
+.issue-image img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+
+/* =========================================
+   COMMON CAUSES OF FIRES
+========================================= */
+
+.causes-section {
+    padding: 65px 0;
+    background: #fffaf8;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+.section-intro h2,
+.emergency-section h2 {
+    color: var(--text);
+    font-size: clamp(30px, 3.5vw, 40px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-intro h2 span,
+.emergency-section h2 span {
+    color: var(--fire-red);
+}
+
+.section-intro > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.cause-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 260px;
+    padding: 25px 21px;
+    background: #ffffff;
+    border: 1px solid #f0dedb;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(75,8,11,0.04);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.cause-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(75,8,11,0.1);
+}
+
+.cause-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #fff0ee;
+    color: var(--fire-red);
+    font-size: 27px;
+}
+
+.cause-card h3 {
+    color: #42191c;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.cause-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.cause-number {
+    display: block;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #f0e2df;
+    color: var(--fire-red);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.causes-bottom {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 19px 22px;
+    background: #fff0ee;
+    border-radius: 8px;
+}
+
+.causes-bottom > i {
+    color: var(--fire-red);
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.causes-bottom p {
+    flex: 1;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.causes-bottom strong {
+    color: var(--dark-red);
+}
+
+.causes-link {
+    color: var(--dark-red);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.causes-link:hover {
+    color: var(--fire-red);
+}
+
+
+/* =========================================
+   WHAT TO DO DURING A FIRE
+========================================= */
+
+.emergency-section {
+    padding: 70px 0;
+    background: #ffffff;
+    border-top: 1px solid #f2e4e1;
+    border-bottom: 1px solid #f2e4e1;
+}
+
+.emergency-description {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.emergency-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 13px 19px;
+    background: var(--fire-red);
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.emergency-button:hover {
+    background: var(--dark-red);
+    color: #ffffff;
+}
+
+.emergency-checklist {
+    padding: 27px;
+    background: #fffaf8;
+    border: 1px solid #f0dedb;
+    border-radius: 8px;
+}
+
+.checklist-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ead9d6;
+}
+
+.checklist-heading > i {
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--dark-red);
+    color: var(--fire-yellow);
+    font-size: 25px;
+}
+
+.checklist-heading h3 {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 5px;
+}
+
+.checklist-heading p {
+    color: #806d6f;
+    font-size: 12px;
+    margin: 0;
+}
+
+.safety-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 17px 0;
+    border-bottom: 1px solid #eee1de;
+}
+
+.safety-icon {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    background: #fff0ee;
+    color: var(--fire-red);
+    border-radius: 8px;
+    font-size: 19px;
+}
+
+.safety-item h4 {
+    color: #42191c;
+    font-size: 13px;
+    font-weight: 800;
+    margin: 1px 0 6px;
+}
+
+.safety-item p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.emergency-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    margin-top: 18px;
+    background: #fff0ee;
+    border-radius: 6px;
+}
+
+.emergency-note > i {
+    color: var(--fire-red);
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.emergency-note p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.emergency-note strong {
+    color: var(--dark-red);
+}
+
+
+/* =========================================
+   AWARENESS BANNER
+========================================= */
+
+.awareness-section {
+    padding: 0 0 35px;
+    background: #ffffff;
+}
+
+.awareness-banner {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    min-height: 85px;
+    padding: 17px 24px;
+    background: linear-gradient(100deg, #a91920, #e52b2b);
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.awareness-banner:hover {
+    filter: brightness(1.08);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.awareness-banner > i:first-child {
+    color: var(--fire-yellow);
+    font-size: 38px;
+}
+
+.awareness-banner span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.awareness-banner strong {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.awareness-banner small {
+    color: #ffe5e5;
+    font-size: 11px;
+}
+
+.awareness-banner .arrow-icon {
+    margin-left: auto;
+    font-size: 21px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    position: relative;
+    padding: 30px 0 16px;
+    background: linear-gradient(100deg, #111111, #39070a);
+    color: #ffffff;
+    border-top: 5px solid var(--fire-red);
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-brand img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.footer-brand strong {
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.footer-brand small {
+    display: block;
+    color: #cccccc;
+    font-size: 9px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #eeeeee;
+    font-size: 10px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--fire-yellow);
+}
+
+.footer-links span {
+    color: #777777;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links a {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #a92a2d;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.social-links a:hover {
+    background: var(--fire-yellow);
+    color: var(--dark-red);
+}
+
+.copyright {
+    padding-top: 15px;
+    margin: 16px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    color: #cccccc;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* SEARCH POPUP */
+
+.search-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.78);
+    backdrop-filter: blur(4px);
+}
+
+.search-popup.show {
+    display: flex;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+}
+
+.search-box h2 {
+    margin-bottom: 20px;
+    color: var(--dark-red);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.search-box form {
+    display: flex;
+    gap: 8px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: var(--fire-red);
+    box-shadow: 0 0 0 3px rgba(229,43,43,0.12);
+}
+
+.search-submit {
+    padding: 10px 17px;
+    border: none;
+    border-radius: 4px;
+    background: var(--fire-red);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.search-submit:hover {
+    background: var(--dark-red);
+}
+
+.close-search {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    border: none;
+    background: none;
+    color: var(--dark-red);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.keyboard-navigation a:focus,
+.keyboard-navigation button:focus,
+.keyboard-navigation input:focus {
+    outline: 3px solid var(--fire-yellow);
+    outline-offset: 3px;
+}
+
+
+/* responsive */
+
+@media (max-width: 991px) {
+
+    .fire-navbar .navbar-collapse {
+        padding-top: 12px;
+    }
+
+    .fire-navbar .nav-link {
+        padding: 10px 12px;
+    }
+
+    .hero {
+        height: 430px;
+    }
+
+    .background-issue {
+        padding: 50px 5%;
+    }
+
+    .causes-section,
+    .emergency-section {
+        padding: 50px 0;
+    }
+
+    .emergency-checklist {
+        margin-top: 5px;
+    }
+
+    .footer-top {
+        justify-content: flex-start;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 360px;
+        height: 430px;
+    }
+
+    .hero-content {
+        padding-left: 17px;
+    }
+
+    .hero h1 {
+        font-size: clamp(30px, 7vw, 43px);
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .background-issue {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 22px;
+        gap: 25px;
+    }
+
+    .issue-image {
+        flex: 1;
+    }
+
+    .issue-image img {
+        max-width: 100%;
+        height: 260px;
+    }
+
+    .cause-card {
+        min-height: 240px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .hero {
+        min-height: 350px;
+        height: 390px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+    }
+
+    .hero-overlay {
+        background: rgba(0,0,0,0.76);
+    }
+
+    .feature-card {
+        min-height: 195px;
+        padding: 17px 14px;
+    }
+
+    .feature-card h3 {
+        font-size: 13px;
+    }
+
+    .feature-card p {
+        font-size: 10px;
+    }
+
+    .causes-section,
+    .emergency-section {
+        padding: 38px 0;
+    }
+
+    .cause-card {
+        min-height: 245px;
+        padding: 20px 16px;
+    }
+
+    .cause-card h3 {
+        font-size: 15px;
+    }
+
+    .causes-bottom {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .causes-link {
+        margin-left: 40px;
+    }
+
+    .emergency-checklist {
+        padding: 18px;
+    }
+
+    .checklist-heading h3 {
+        font-size: 16px;
+    }
+
+    .safety-item {
+        gap: 10px;
+    }
+
+    .awareness-banner {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .awareness-banner > i:first-child {
+        font-size: 29px;
+    }
+
+    .awareness-banner strong {
+        font-size: 12px;
+    }
+
+    .awareness-banner small {
+        font-size: 10px;
+    }
+
+    .footer-links {
+        gap: 7px;
+    }
+
+    .search-box {
+        padding: 28px 20px;
+    }
+
+    .search-box form {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

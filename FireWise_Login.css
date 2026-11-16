@@ -1,0 +1,269 @@
+
+/* GENERAL */
+
+:root {
+    --dark-red: #650b10;
+    --fire-red: #e52b2b;
+    --black: #111111;
+    --text: #351719;
+    --muted: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    min-height: 100vh;
+}
+
+/* MAIN LAYOUT */
+
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* LEFT IMAGE */
+
+.image-side {
+    width: 50%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #222;
+}
+
+.image-side img {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* RIGHT LOGIN SIDE */
+
+.login-side {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #ffffff;
+}
+
+.login-content {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* LOGO */
+
+.logo-container {
+    margin-bottom: 35px;
+}
+
+.logo-container img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* LOGIN HEADING */
+
+.welcome-text {
+    color: var(--fire-red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.login-heading h1 {
+    color: var(--dark-red);
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.login-heading > p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+/* INPUT FIELDS */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    padding: 0 14px;
+    transition: 0.3s;
+}
+
+.input-container:focus-within {
+    border-color: var(--fire-red);
+    box-shadow: 0 0 0 3px rgba(229, 43, 43, 0.1);
+}
+
+.input-container > i {
+    color: #999;
+    font-size: 17px;
+}
+
+.input-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 14px 12px;
+    font-size: 13px;
+    background: transparent;
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+/* PASSWORD TOGGLE */
+
+.password-toggle {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* ERROR MESSAGES */
+
+.error-message {
+    display: block;
+    color: var(--fire-red);
+    font-size: 11px;
+    margin-top: 6px;
+    min-height: 14px;
+}
+
+/* LOGIN BUTTON */
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: var(--dark-red);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button i {
+    margin-left: 8px;
+}
+
+.login-button:hover {
+    background: var(--fire-red);
+    transform: translateY(-2px);
+}
+
+/* LOGIN RESULT */
+
+.login-result {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 15px;
+    color: var(--fire-red);
+}
+
+/* BOTTOM TEXT */
+
+.login-bottom {
+    border-top: 1px solid #eee;
+    margin-top: 55px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.login-bottom p {
+    color: #999;
+    font-size: 11px;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    .image-side {
+        width: 100%;
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .image-side img {
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .login-side {
+        width: 100%;
+        min-height: auto;
+        padding: 45px 25px;
+    }
+
+    .login-content {
+        max-width: 450px;
+    }
+
+    .logo-container {
+        margin-bottom: 25px;
+    }
+
+    .login-heading h1 {
+        font-size: 35px;
+    }
+
+    .login-bottom {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .image-side,
+    .image-side img {
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .login-side {
+        padding: 35px 20px;
+    }
+}
